@@ -18,4 +18,11 @@ RSpec.feature "Comments", type: :request do
       expect(data[0][:upvote_count]).to eq(1)
     end
   end
+
+  describe "Adding Questions" do
+    it "should accept POST of question" do
+      post "/questions", params: {question: {text: "What is your favorite color?"}}
+      expect(response).to be_success
+    end
+  end
 end
