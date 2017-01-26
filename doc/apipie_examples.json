@@ -1,0 +1,99 @@
+{
+  "questions#create": [
+    {
+      "verb": "POST",
+      "path": "/questions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "question[text]=What+is+your+favorite+color%3F",
+      "response_data": {
+        "id": 1,
+        "text": "What is your favorite color?",
+        "upvotes_count": null,
+        "comments_count": null,
+        "is_answered": null
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "questions#index": [
+    {
+      "verb": "GET",
+      "path": "/questions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "text": "Question 1",
+          "upvotes_count": null,
+          "comments_count": null,
+          "is_answered": null
+        },
+        {
+          "id": 2,
+          "text": "Question 2",
+          "upvotes_count": null,
+          "comments_count": null,
+          "is_answered": null
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/questions",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "text": "Question 3",
+          "upvotes_count": 1,
+          "comments_count": null,
+          "is_answered": null
+        },
+        {
+          "id": 2,
+          "text": "Question 4",
+          "upvotes_count": null,
+          "comments_count": null,
+          "is_answered": null
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "upvotes#create": [
+    {
+      "verb": "POST",
+      "path": "/questions/1/upvotes",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": 1,
+        "question_id": 1
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}
