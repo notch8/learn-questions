@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
     Gets list of all open questions
   EOS
   def index
-    @questions = Question.all
+    @questions = Question.order(upvotes_count: :desc)
     render json: @questions
   end
 

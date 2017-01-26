@@ -14,11 +14,11 @@ ActiveRecord::Schema.define(version: 20170125152416) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
-    t.integer  "upvotes_count"
-    t.integer  "comments_count"
+    t.integer  "upvotes_count",  default: 0
+    t.integer  "comments_count", default: 0
     t.boolean  "is_answered"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "upvotes", force: :cascade do |t|
